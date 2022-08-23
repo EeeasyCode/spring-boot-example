@@ -2,6 +2,8 @@ package com.spring.study.controller;
 
 import com.spring.study.dto.MemberDto;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -9,13 +11,16 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/get-api")
 public class GetController {
+    private final Logger LOGGER = LoggerFactory.getLogger(GetController.class);
     @GetMapping("/name")
     public String getName() {
+        LOGGER.info("name 메서드가 호출되었습니다.");
         return "Flature";
     }
 
     @GetMapping("/variable1/{variable}")
     public String getVariable1(@PathVariable String variable) {
+        LOGGER.info("@PathVariable을 통해 들어온 값 : {}", variable);
         return variable;
     }
 
