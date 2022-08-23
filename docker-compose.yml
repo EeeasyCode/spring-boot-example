@@ -13,7 +13,7 @@ services:
       - "./mariadb/data:/var/lib/mysql"
     environment:
       MARIADB_DATABASE: example
-      MARIADB_USER:
-      MARIADB_PASSWORD:
-      MARIADB_ROOT_PASSWORD:
+      MARIADB_USER: changmin
+      MARIADB_PASSWORD: clear
+      MARIADB_ROOT_PASSWORD: 1234
     restart: always
