@@ -1,6 +1,7 @@
 package com.spring.study.controller;
 
 import com.spring.study.dto.MemberDto;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -23,6 +24,7 @@ public class GetController {
         return var;
     }
 
+    @ApiOperation(value = "GET 메서드 예제", notes = "@RequestParam을 활용한 GET Method")
     @GetMapping("/request1")
     public String getRequestParam1(
             @RequestParam String name,

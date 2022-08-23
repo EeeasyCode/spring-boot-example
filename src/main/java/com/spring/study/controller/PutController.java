@@ -14,16 +14,16 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/put-api")
 public class PutController {
-    @PutMapping("/member")
-    public String postMember(@RequestBody Map<String, Object> putData) {
-        StringBuilder sb = new StringBuilder();
-
-        putData.entrySet().forEach(map -> {
-            sb.append(map.getKey() + " : " + map.getValue() + "\n");
-        });
-
-        return sb.toString();
-    }
+//    @PutMapping("/member")
+//    public String postMember(@RequestBody Map<String, Object> putData) {
+//        StringBuilder sb = new StringBuilder();
+//
+//        putData.entrySet().forEach(map -> {
+//            sb.append(map.getKey() + " : " + map.getValue() + "\n");
+//        });
+//
+//        return sb.toString();
+//    }
 
     @PutMapping("/member1")
     public String postMemberDto1(@RequestBody MemberDto memberDto) {

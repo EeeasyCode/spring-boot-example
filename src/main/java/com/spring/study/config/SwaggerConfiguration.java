@@ -19,7 +19,7 @@ public class SwaggerConfiguration {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.spring.boot"))
+                .apis(RequestHandlerSelectors.basePackage("com.spring.study"))
                 .paths(PathSelectors.any())
                 .build();
     }
